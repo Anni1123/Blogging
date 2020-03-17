@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
+import com.theartofdev.edmodo.cropper.CropImage;
 import com.google.android.gms.auth.api.signin.internal.Storage;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
