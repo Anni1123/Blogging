@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             protected void onBindViewHolder(@NonNull BlogViewHolder holder, int position, @NonNull Blog model) {
                 holder.setTitle(model.getTitle());
                 holder.setDesc(model.getDescription());
-                holder.setImage(getApplicationContext(),model.getImages());
+                holder.setImage(model.getImages());
             }
         };
         firebaseRecyclerAdapter.startListening();
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
             TextView postdesc=(TextView)view.findViewById(R.id.postdes);
             postdesc.setText(desc);
         }
-        public void setImage(Context ctx,String image){
+        public void setImage(String image){
             ImageView postimage=(ImageView)view.findViewById(R.id.postimage);
            Picasso.get().load(image).into(postimage);
         }
