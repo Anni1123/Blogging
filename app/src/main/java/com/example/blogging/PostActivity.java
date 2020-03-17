@@ -96,6 +96,7 @@ public class PostActivity extends AppCompatActivity {
                            newPost.child("images").setValue(url);
                            Toast.makeText(PostActivity.this, "Done", Toast.LENGTH_LONG).show();
                            mProgressDialog.dismiss();
+                           startActivity(new Intent(PostActivity.this,MainActivity.class));
                        }
                    });
                 }
