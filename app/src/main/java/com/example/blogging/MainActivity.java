@@ -104,6 +104,15 @@ public class MainActivity extends AppCompatActivity {
         if(item.getItemId()==R.id.action_add){
             startActivity(new Intent(MainActivity.this,PostActivity.class));
         }
+
+        if(item.getItemId()==R.id.notification){
+            startActivity(new Intent(MainActivity.this,NotificationActivity.class));
+        }
+
+        if(item.getItemId()==R.id.setting){
+            startActivity(new Intent(MainActivity.this,SettingActivity.class));
+        }
+
         return super.onOptionsItemSelected(item);
     }
 
