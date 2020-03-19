@@ -68,6 +68,7 @@ public class PostActivity extends AppCompatActivity {
         if (requestCode == GALLERY_REQUEST && resultCode == RESULT_OK) {
             imageuri = data.getData();
             selectimage.setImageURI(imageuri);
+
         }
     }
 
@@ -79,7 +80,7 @@ public class PostActivity extends AppCompatActivity {
             mProgressDialog = new ProgressDialog(PostActivity.this);
             mProgressDialog.setTitle("Uploading Image...");
             mProgressDialog.setMessage("Please wait while image is uploading");
-            mProgressDialog.setCanceledOnTouchOutside(true);
+            mProgressDialog.setCanceledOnTouchOutside(false);
             mProgressDialog.show();
             final StorageReference filepath = storageReference.child("profile_images").child(imageuri.getLastPathSegment());
             filepath.putFile(imageuri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
